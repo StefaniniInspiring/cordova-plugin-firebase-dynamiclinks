@@ -11,7 +11,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <engines>
         <engine name="cordova" version=">=9.0.0"/>
         <engine name="cordova-android" version=">=8.0.0"/>
-        <engine name="cordova-ios" version=">=6.0.0"/>
+        <engine name="cordova-ios" version=">=5.1.1"/>
     </engines>
 
     <js-module name="FirebaseDynamicLinks" src="www/FirebaseDynamicLinks.js">
@@ -21,7 +21,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <preference name="APP_DOMAIN_NAME" />
     <preference name="APP_DOMAIN_PATH" default="/" />
 
-    <dependency id="cordova-plugin-firebase-analytics" version="~5.0.0"/>
+    <dependency id="cordova-plugin-firebase-analytics" version="6.17.0"/>
 
     <platform name="android">
         <preference name="ANDROID_FIREBASE_DYNAMICLINKS_VERSION" default="19.1.+"/>
@@ -52,7 +52,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </platform>
 
     <platform name="ios">
-        <preference name="IOS_FIREBASE_DYNAMICLINKS_VERSION" default="~> 7.0.0"/>
+        <preference name="IOS_FIREBASE_DYNAMICLINKS_VERSION" default="6.17.0"/>
 
         <config-file parent="/*" target="config.xml">
             <preference name="DOMAIN_URI_PREFIX" value="https://$APP_DOMAIN_NAME$APP_DOMAIN_PATH"/>
@@ -106,6 +106,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             </config>
             <pods>
                 <pod name="Firebase/DynamicLinks" spec="$IOS_FIREBASE_DYNAMICLINKS_VERSION" />
+                <pod name="Firebase/Analytics" spec="$IOS_FIREBASE_DYNAMICLINKS_VERSION" />
             </pods>
         </podspec>
     </platform>
